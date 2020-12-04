@@ -1,4 +1,5 @@
 var repeatingSpamFunction = null;
+var repeatingCreateSpamButtonFunction = null;
 var message = '';
 
 function getElementByXpath(path) {
@@ -44,12 +45,12 @@ function doSpam(element) {
   if(element.innerHTML == 'GASS'){
     var input = getElementByXpath("//*[@id=\"main\"]/footer/div[1]/div[2]/div/div[2]");
     if(input.innerHTML == '' || input.innerHTML == null){
-      window.alert('Jan Banyak-Banyak, Ibo Wak-_-');
+      window.alert('BERAPA BUAH?.');
       return;
     }
-    element.innerHTML = 'ALAH TU';
+    element.innerHTML = 'STOP';
     message = input.innerHTML;
-    var interval = parseInt (prompt('Jan Banyak-Banyak, Ibo Wak-_-:', '500'));
+    var interval = parseInt (prompt('BERAPA BUAH?:', '500'));
     repeatingSpamFunction = window.setInterval(function(){
       sendMessage();
     }, interval);
